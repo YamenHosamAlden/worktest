@@ -1,8 +1,12 @@
 # worktest
 
-for code: git clone https://github.com/YamenHosamAlden/worktest.git
+for code: 
+
+git clone https://github.com/YamenHosamAlden/worktest.git
+
 then 
 flutter pub get 
+
 flutter run 
 
 App Description:
