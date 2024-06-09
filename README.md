@@ -30,6 +30,11 @@ Account Creation:
   Price
   Ratings and reviews from other customers
 
+
+  Categories:
+
+  Displays Categories
+
   Personal Information:
 
   Users can view and update their personal information entered during the registration process.
