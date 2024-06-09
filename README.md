@@ -37,6 +37,7 @@ Account Creation:
 
 
   User Interface:
+  
   Home Screen: Displays products.
   Registration and Login Screen: Simple and user-friendly interface for logging in or creating a new account.
   Product Details Screen: Provides comprehensive information about each product, including images, details, and reviews.
