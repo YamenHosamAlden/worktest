@@ -1,5 +1,10 @@
 # worktest
 
+for code: git clone https://github.com/YamenHosamAlden/worktest.git
+then 
+flutter pub get 
+flutter run 
+
 App Description:
 The E-Commerce Application is a comprehensive platform allowing users to create personal accounts, browse and purchase products online. The app features a user-friendly interface and a wide range of categories and products.
 
