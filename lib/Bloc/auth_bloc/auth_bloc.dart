@@ -13,9 +13,10 @@ class AuthBloc extends Bloc<AuthEvent, AuthStates> {
 
       if (event.email == AppSharedPreferences.getEmail &&
           event.password == AppSharedPreferences.getPassword) {
+              await AppSharedPreferences.saveToken("token");
         emit(LogInSuccesfulState());
       } else {
-        emit(LogInErrorState(message: "Check your email or password"));
+        emit(LogInErrorState(message: "Check your email or password")); 
       }
     });
 
@@ -27,6 +28,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthStates> {
         await AppSharedPreferences.saveLastName(event.lastName);
         await AppSharedPreferences.savePhone(event.phone);
         await AppSharedPreferences.savePassword(event.password);
+            await AppSharedPreferences.saveToken("token");
 
         emit(SignUpSuccesfulState());
       } catch (error) {

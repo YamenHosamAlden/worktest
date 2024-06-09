@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     super.initState();
     Timer(const Duration(seconds: 3), () {
-      if (AppSharedPreferences.hasEmail) {
+      if (AppSharedPreferences.hasToken) {
         GeneralRoute.navigatorPushAndRemoveScreensWithContext(
             context, const MainScreen());
       } else {

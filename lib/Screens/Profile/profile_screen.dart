@@ -66,11 +66,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     showConfirmDialog(context,
                         title: "Are you sure you want to log out?".tr(context),
                         onPressed: () {
-                      AppSharedPreferences.removeEmail();
-                      AppSharedPreferences.removeFirstName();
-                      AppSharedPreferences.removeLastName();
-                      AppSharedPreferences.removePhone();
-                      AppSharedPreferences.removePassword();
+            
+                      AppSharedPreferences.removeToken();
                       BlocProvider.of<MainBloc>(context).currentIndex = 0;
           
                       GeneralRoute.navigatorPushAndRemoveScreensWithContext(

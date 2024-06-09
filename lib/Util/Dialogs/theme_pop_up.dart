@@ -25,27 +25,25 @@ popUpChooseTheme(BuildContext context) {
                         textData: "Choose Theme".tr(context),
                         textStyle: Theme.of(context).textTheme.headlineMedium)),
                 const SizedBox(height: 5),
-                CheckboxListTile(
+                         CheckboxListTile(
                     value: !value,
                     onChanged: (newVal) {
-                      newVal = BlocProvider.of<AppThemeBloc>(context).darkTheme;
-                      BlocProvider.of<AppThemeBloc>(context)
-                          .add(ToggleThemeEvent());
-                    },
-                    title: CustomText(
-                      textData: "Dark".tr(context),
-                    )),
-                CheckboxListTile(
-                    value: value,
-                    onChanged: (newVal) {
-                      newVal =
-                          !BlocProvider.of<AppThemeBloc>(context).darkTheme;
                       BlocProvider.of<AppThemeBloc>(context)
                           .add(ToggleThemeEvent());
                     },
                     title: CustomText(
                       textData: "Light".tr(context),
                     )),
+                CheckboxListTile(
+                    value: value,
+                    onChanged: (newVal) {
+                      BlocProvider.of<AppThemeBloc>(context)
+                          .add(ToggleThemeEvent());
+                    },
+                    title: CustomText(
+                      textData: "Dark".tr(context),
+                    )),
+       
               ]),
             ));
       });
